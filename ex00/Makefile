@@ -6,20 +6,15 @@
 #    By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/28 13:37:31 by lantonio          #+#    #+#              #
-#    Updated: 2025/10/28 14:26:17 by lantonio         ###   ########.fr        #
+#    Updated: 2025/10/29 13:09:54 by lantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	tf.out
+NAME		=	whatever.out
 
-HEADERS		=	./includes/Swap.hpp \
-				./includes/Min.hpp \
-				./includes/Max.hpp \
+HEADERS		=	./includes/whatever.hpp \
 
 SRCS		=	./src/main.cpp \
-				./src/swap.cpp \
-				./src/min.cpp \
-				./src/max.cpp \
 
 CXX			=	c++
 
