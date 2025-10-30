@@ -6,12 +6,12 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:13:25 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 15:17:56 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:23:21 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Array.hpp"
 
 int	main(void) {
-	
+	return 0;
 }

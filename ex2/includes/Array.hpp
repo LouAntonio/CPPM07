@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:19:16 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 15:18:00 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:21:47 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 template <typename T> class Array {
 	private:
 		T				*arr;
-		unsigned int	size;
+		unsigned int	_size;
 	public:
 		Array();
 		Array(unsigned int n);
@@ -29,9 +29,9 @@ template <typename T> class Array {
 
 		int	size() const;
 	
-	class OutOfRange : public exceptio {
+	class OutOfRange : public std::exception {
 		virtual const char* what() const throw();
-	}
+	};
 };
 
 #include "../src/Array.tpp"
