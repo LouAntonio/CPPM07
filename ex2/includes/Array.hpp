@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:19:16 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 15:10:22 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:18:00 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ template <typename T> class Array {
 		virtual const char* what() const throw();
 	}
 };
+
+#include "../src/Array.tpp"
 
 #endif

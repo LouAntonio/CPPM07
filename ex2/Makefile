@@ -6,13 +6,14 @@
 #    By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/28 13:37:31 by lantonio          #+#    #+#              #
-#    Updated: 2025/10/30 13:18:32 by lantonio         ###   ########.fr        #
+#    Updated: 2025/10/30 15:17:54 by lantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	array.out
 
-HEADERS		=	./includes/iter.hpp \
+HEADERS		=	./includes/array.hpp \
+				./src/Array.tpp \
 
 SRCS		=	./src/main.cpp \
 
