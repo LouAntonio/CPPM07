@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:31:30 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 13:06:44 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/30 13:15:49 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,8 @@ int main(void)
 	iter(int_vet, 5, print_arr);
 	std::cout << "---" << std::endl;
 	iter(strings, string_len, print_arr);
+	std::cout << "---" << std::endl;
+	iter(int_vet, 5, concat_one);
+	std::cout << "---" << std::endl;
+	iter(strings, string_len, concat_one);
 }
