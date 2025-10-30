@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:35:12 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 15:00:12 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:10:23 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 template <typename T>
 Array<T>::Array() {
 	size = 0;
-	arr = new *arr;
+	arr = new T[size];
 }
 
 template <typename T>
 Array<T>::Array(unsigned int n) {
 	size = n;
-	arr = new *arr[size];
+	arr = new T[size];
 }
 
 template <typename T>
@@ -46,4 +46,9 @@ Array<T>::~Array() { }
 template <typename T>
 int Array<T>::size() const {
 	return size;
+}
+
+template <typename T>
+const char* Array<T>::OutOfRange::what() const throw() {
+	return "index out of range!";
 }

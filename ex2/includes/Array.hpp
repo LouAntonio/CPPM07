@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:19:16 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 14:57:44 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:10:22 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ARRAY_HPP
 
 #include <iostream>
+#include <exception>
 
 template <typename T> class Array {
 	private:
@@ -27,6 +28,10 @@ template <typename T> class Array {
 		~Array();
 
 		int	size() const;
+	
+	class OutOfRange : public exceptio {
+		virtual const char* what() const throw();
+	}
 };
 
 #endif
