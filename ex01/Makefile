@@ -6,7 +6,7 @@
 #    By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/28 13:37:31 by lantonio          #+#    #+#              #
-#    Updated: 2025/10/30 09:42:17 by lantonio         ###   ########.fr        #
+#    Updated: 2025/10/30 11:42:33 by lantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ NAME		=	iter.out
 HEADERS		=	./includes/iter.hpp \
 
 SRCS		=	./src/main.cpp \
-				./src/iter.cpp \
 
 CXX			=	c++
 

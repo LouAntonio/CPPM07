@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   printer.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 09:43:02 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 13:02:25 by lantonio         ###   ########.fr       */
+/*   Created: 2025/10/30 13:01:06 by lantonio          #+#    #+#             */
+/*   Updated: 2025/10/30 13:02:22 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-#define ITER_HPP
+#ifndef PRINTER_HPP
+#define PRINTER_HPP
 
 #include <iostream>
-#include <vector>
 
 template <typename A>
-void iter(A *arr, const int len, void (*func)(A const &)) {
-	int	i = -1;
-	while (++i < len)
-		func(arr[i]);
+void print_arr(A const &value) {
+	std::cout << "The value is " << value << std::endl;
 }
 
 #endif
