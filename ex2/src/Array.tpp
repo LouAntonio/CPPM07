@@ -6,50 +6,48 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:35:12 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/31 10:59:29 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/31 12:24:10 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Array.hpp"
 
 template <typename T>
-Array<T>::Array() {
-	_size = 0;
-	arr = new T[_size];
-	//std::cout << "Array default constructor called!" << std::endl;
-}
+Array<T>::Array() : arr(NULL), _size(0) { }
 
 template <typename T>
 Array<T>::Array(unsigned int n) {
 	_size = n;
 	arr = new T[_size];
-	//std::cout << "Array parameterized constructor called!" << std::endl;
 }
 
 template <typename T>
-Array<T>::Array(const Array &src) {
-	this = src;
-	//std::cout << "Array cpy constructor called!" << std::endl;
+Array<T>::Array(const Array &src) : arr(NULL), _size(0) {
+	*this = src;
 }
 
 template <typename T>
-Array<T> &Array<T>::operator=(const Array &src) {
-	if (this != &src) {
-		delete [] arr;
-		_size = src._size;
-		arr = new T[_size];
-		for (unsigned int i = 0; i < _size; i++)
-			arr[i] = src.arr[i];
-	}
-	//std::cout << "Array assignment operator called!" << std::endl;
-	return *this;
+Array<T> &Array<T>::operator=(const Array<T> &src) {
+    if (this != &src) {
+        delete this->arr;
+		this->_size = src._size;
+		if (this->_size > 0)
+		{
+			this->arr = new T[this->_size];
+			for (unsigned int i = 0; i < this->_size; i++)
+				this->arr[i] = src.arr[i];
+		} else { this->arr = NULL; }
+    }
+    return *this;
 }
 
 template <typename T>
-Array<T>::~Array() {  }
+Array<T>::~Array() {
+	delete[] arr;
+}
 
 template <typename T>
-int Array<T>::size() const {
+unsigned int Array<T>::size() const {
 	return _size;
 }
 
@@ -60,6 +58,13 @@ const char* Array<T>::OutOfRange::what() const throw() {
 
 template <typename T>
 T &Array<T>::operator[](unsigned int index) {
+	if (index >= _size)
+		throw Array<T>::OutOfRange();
+	return arr[index];
+}
+
+template <typename T>
+const T &Array<T>::operator[](unsigned int index) const {
 	if (index >= _size)
 		throw Array<T>::OutOfRange();
 	return arr[index];

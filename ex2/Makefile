@@ -6,14 +6,15 @@
 #    By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/28 13:37:31 by lantonio          #+#    #+#              #
-#    Updated: 2025/10/30 15:17:54 by lantonio         ###   ########.fr        #
+#    Updated: 2025/10/31 11:06:14 by lantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	array.out
 
-HEADERS		=	./includes/array.hpp \
-				./src/Array.tpp \
+HEADERS		=	./includes/Array.hpp \
+
+TEMPLATES	=	./src/Array.tpp \
 
 SRCS		=	./src/main.cpp \
 
@@ -27,7 +28,7 @@ $(NAME): $(OBJS)
 	@$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 	@echo "\033[1;32mSUCCESS!\033[0m"
 
-%.o:%.cpp $(HEADERS)
+%.o: %.cpp $(HEADERS) $(TEMPLATES)
 	@$(CXX) $(FLAGS) -c $< -o $@
 
 all: $(NAME)
