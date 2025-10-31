@@ -6,13 +6,22 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:31:30 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 13:15:49 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/31 13:02:30 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../includes/iter.hpp"
-#include "../includes/printer.hpp"
+
+template <typename A>
+void print_arr(A const &value) {
+	std::cout << "The value is " << value << std::endl;
+}
+
+template <typename A>
+void concat_one(A &value) {
+	std::cout << "The result is " << value << "1" << std::endl;
+}
 
 int main(void)
 {
