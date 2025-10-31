@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:35:12 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/31 12:24:10 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/31 12:28:13 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Array<T>::Array() : arr(NULL), _size(0) { }
 template <typename T>
 Array<T>::Array(unsigned int n) {
 	_size = n;
-	arr = new T[_size];
+	arr = new T[_size]();
 }
 
 template <typename T>
@@ -42,9 +42,7 @@ Array<T> &Array<T>::operator=(const Array<T> &src) {
 }
 
 template <typename T>
-Array<T>::~Array() {
-	delete[] arr;
-}
+Array<T>::~Array() { delete[] arr; }
 
 template <typename T>
 unsigned int Array<T>::size() const {

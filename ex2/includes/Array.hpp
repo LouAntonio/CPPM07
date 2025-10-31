@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:19:16 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/31 12:24:14 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/31 12:39:55 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <exception>
+#include <cstdlib>
 
 template <typename T> class Array {
 	private:
