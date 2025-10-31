@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:35:12 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 15:21:03 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/31 10:59:29 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,20 @@ template <typename T>
 Array<T>::Array() {
 	_size = 0;
 	arr = new T[_size];
+	//std::cout << "Array default constructor called!" << std::endl;
 }
 
 template <typename T>
 Array<T>::Array(unsigned int n) {
 	_size = n;
 	arr = new T[_size];
+	//std::cout << "Array parameterized constructor called!" << std::endl;
 }
 
 template <typename T>
 Array<T>::Array(const Array &src) {
 	this = src;
+	//std::cout << "Array cpy constructor called!" << std::endl;
 }
 
 template <typename T>
@@ -38,10 +41,12 @@ Array<T> &Array<T>::operator=(const Array &src) {
 		for (unsigned int i = 0; i < _size; i++)
 			arr[i] = src.arr[i];
 	}
+	//std::cout << "Array assignment operator called!" << std::endl;
+	return *this;
 }
 
 template <typename T>
-Array<T>::~Array() { }
+Array<T>::~Array() {  }
 
 template <typename T>
 int Array<T>::size() const {
@@ -51,4 +56,11 @@ int Array<T>::size() const {
 template <typename T>
 const char* Array<T>::OutOfRange::what() const throw() {
 	return "index out of range!";
+}
+
+template <typename T>
+T &Array<T>::operator[](unsigned int index) {
+	if (index >= _size)
+		throw Array<T>::OutOfRange();
+	return arr[index];
 }

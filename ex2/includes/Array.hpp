@@ -6,7 +6,7 @@
 /*   By: lantonio <lantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 13:19:16 by lantonio          #+#    #+#             */
-/*   Updated: 2025/10/30 15:21:47 by lantonio         ###   ########.fr       */
+/*   Updated: 2025/10/31 09:58:44 by lantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ template <typename T> class Array {
 		~Array();
 
 		int	size() const;
+		T &operator[](unsigned int index);
 	
 	class OutOfRange : public std::exception {
 		virtual const char* what() const throw();
